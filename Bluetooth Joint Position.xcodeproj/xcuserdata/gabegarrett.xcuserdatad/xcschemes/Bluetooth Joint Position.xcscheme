@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "865797331CC5BC9F00575D66"
+               BuildableName = "Bluetooth Joint Position.app"
+               BlueprintName = "Bluetooth Joint Position"
+               ReferencedContainer = "container:Bluetooth Joint Position.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "865797441CC5BC9F00575D66"
+               BuildableName = "Bluetooth Joint PositionTests.xctest"
+               BlueprintName = "Bluetooth Joint PositionTests"
+               ReferencedContainer = "container:Bluetooth Joint Position.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8657974F1CC5BC9F00575D66"
+               BuildableName = "Bluetooth Joint PositionUITests.xctest"
+               BlueprintName = "Bluetooth Joint PositionUITests"
+               ReferencedContainer = "container:Bluetooth Joint Position.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "865797331CC5BC9F00575D66"
+            BuildableName = "Bluetooth Joint Position.app"
+            BlueprintName = "Bluetooth Joint Position"
+            ReferencedContainer = "container:Bluetooth Joint Position.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "865797331CC5BC9F00575D66"
+            BuildableName = "Bluetooth Joint Position.app"
+            BlueprintName = "Bluetooth Joint Position"
+            ReferencedContainer = "container:Bluetooth Joint Position.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "865797331CC5BC9F00575D66"
+            BuildableName = "Bluetooth Joint Position.app"
+            BlueprintName = "Bluetooth Joint Position"
+            ReferencedContainer = "container:Bluetooth Joint Position.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
