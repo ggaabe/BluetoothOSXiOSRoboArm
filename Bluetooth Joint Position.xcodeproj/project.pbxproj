@@ -14,6 +14,7 @@
 		8657974A1CC5BC9F00575D66 /* Bluetooth_Joint_PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865797491CC5BC9F00575D66 /* Bluetooth_Joint_PositionTests.swift */; };
 		865797551CC5BC9F00575D66 /* Bluetooth_Joint_PositionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865797541CC5BC9F00575D66 /* Bluetooth_Joint_PositionUITests.swift */; };
 		865797631CC5BE0600575D66 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865797621CC5BE0600575D66 /* BLE.swift */; };
+		865797671CC6C3A500575D66 /* BLEManagerAsCentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865797661CC6C3A500575D66 /* BLEManagerAsCentral.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		865797541CC5BC9F00575D66 /* Bluetooth_Joint_PositionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth_Joint_PositionUITests.swift; sourceTree = "<group>"; };
 		865797561CC5BC9F00575D66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		865797621CC5BE0600575D66 /* BLE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
+		865797661CC6C3A500575D66 /* BLEManagerAsCentral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerAsCentral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				8657973D1CC5BC9F00575D66 /* Main.storyboard */,
 				865797401CC5BC9F00575D66 /* Info.plist */,
 				865797621CC5BE0600575D66 /* BLE.swift */,
+				865797661CC6C3A500575D66 /* BLEManagerAsCentral.swift */,
 			);
 			path = "Bluetooth Joint Position";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				8657973A1CC5BC9F00575D66 /* ViewController.swift in Sources */,
 				865797631CC5BE0600575D66 /* BLE.swift in Sources */,
 				865797381CC5BC9F00575D66 /* AppDelegate.swift in Sources */,
+				865797671CC6C3A500575D66 /* BLEManagerAsCentral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
