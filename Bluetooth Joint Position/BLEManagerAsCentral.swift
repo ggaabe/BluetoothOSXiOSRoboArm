@@ -47,27 +47,19 @@ class BLEHandler : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate{
     }
     
     var peripherals = [CBPeripheral]()
+    var centrals = [CBCentralManager]()
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
         print("peripheral found! " + String(peripheral))
         if((peripheral.name) == "Robot Arm Peripheral"){ //change to NSUUID
             print("FOUND IPHONE!")
             //peripheral.delegate = self
             self.peripherals.append(peripheral)
+            self.centrals.append(central)
             central.connectPeripheral(peripherals[0], options: nil)
         }
         print("Advertisement data: " + String(advertisementData))
         print("Services: " + String(peripheral.services))
-        /* if peripheral.services != nil{
-         for service in peripheral.services!{
-         if service.characteristics != nil{
-         for characteristic in service.characteristics!{
-         print(characteristic)
-         }
-         }
-         }
-         }*/
-        // central.retrievePeripheralsWithIdentifiers(macbookIdentifiers)
-        //print(peripherals)
+   
     }
     
     func centralManager(central: CBCentralManager, didFailToConnectPeripheral peripheral: CBPeripheral, error: NSError?) {
@@ -75,37 +67,13 @@ class BLEHandler : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate{
     }
     func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
         print("CONNECTED to \(peripheral)")
-        central.stopScan()
+        //central.stopScan()
         //NOTE TO SELF: RUN THIS. THEN THE LAPTOP FINDS THE CHARACTERISTSICS FOR SOME REASON. THEN COMMENT OUT AND IT FINDS IT AGAIN. INCONSISTENT BEHAVIOR. EXHAUSTIVE SCANNING FORCES LAPTOP TO MEMORIZE THE CHARACTERISTIC THOUGH.
         
         peripherals[0].delegate = self
         peripherals[0].discoverServices([serviceUUid])
         print("CONNECTED SERVICES: " + String(peripherals[0].services))
-//        if peripheral.services != nil{
-//            print("Services is not nil")
-//            print(peripherals[0].services)
-//            for service in peripherals[0].services!{
-//                print("iterating through services")
-//                peripherals[0].discoverCharacteristics(nil, forService: service)
-//                if service.characteristics != nil{
-//                    for characteristic in service.characteristics!{
-//                        central.stopScan()
-//                        print("C H A R A C T E R I S T I C S OMG")
-//                        print(characteristic)
-//                        
-//                        let newValue = "ROBOT DATA"
-//                        let data = newValue.dataUsingEncoding(NSUTF8StringEncoding)
-//                        peripherals[0].setNotifyValue(true, forCharacteristic: characteristic)
-//                        peripherals[0].writeValue(data!, forCharacteristic: characteristic, type: CBCharacteristicWriteType.WithResponse)
-//                        print("Wrote to papa")
-//                    }
-//                }else{
-//                    print("characteristics is nil")
-//                }
-//            }
-//        }else{
-//            print("services currently nil")
-//        }
+
     }
     
     
@@ -128,13 +96,13 @@ class BLEHandler : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate{
         {
             print("Found characteristic!")
             peripheral.setNotifyValue(true, forCharacteristic: characteristic)
-            print("Found characteristic!")
+            centrals[0].stopScan()
+            print("Subscribed!")
             print(characteristic)
         }
     }
     func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?)
     {
-        print("characteristic changed:\(characteristic)")
-        print(NSString(data: characteristic.value!, encoding:NSUTF8StringEncoding))
+        print(NSString(data: characteristic.value!, encoding:NSUTF8StringEncoding) as! String)
     }
 }
